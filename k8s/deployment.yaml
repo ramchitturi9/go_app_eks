@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
       - name: go-app
-        image: 637423478451.dkr.ecr.us-east-1.amazonaws.com/go-app-repo:latest
+        image: <ECR URI>/go-app-repo:latest
         ports:
         - containerPort: 8080
         env:
