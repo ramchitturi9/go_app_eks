@@ -1,5 +1,5 @@
 # Go Application on AWS EKS
-This project deploys a simple Go application on AWS EKS (Elastic Kubernetes Service) using Terraform for infrastructure provisioning. The application is containerized using Docker and managed with Kubernetes resources defined in the `k8s` directory.
+This project deploys a simple Go application on AWS EKS using Terraform. The application is containerized using Docker and managed with Kubernetes resources defined in the `k8s` directory.
 
 ### Project Structure
 - `Dockerfile`: Defines the Docker container for the Go application.
