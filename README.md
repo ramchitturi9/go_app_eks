@@ -23,21 +23,22 @@ This project deploys a simple Go application on AWS EKS (Elastic Kubernetes Serv
 ## Setup and Deployment
 
 ### Build and push the Docker Image
-```bash
-- docker build -t <ecr-repo-url>:<tag> .
-- docker push <ecr-repo-url>:<tag>
+
+- `docker build -t <ecr-repo-url>:<tag> .`
+- `docker push <ecr-repo-url>:<tag>`
 
 ### Running Terraform
-- cd terraform
-- terraform init
-- terraform plan
-- terraform apply
+- `cd terraform`
+- `terraform init`
+- `terraform plan`
+- `terraform apply`
 
 ### Deploying to Kubernetes
-- kubectl apply -f k8s/deployment.yaml
-- kubectl apply -f k8s/service.yaml
+- `kubectl apply -f k8s/deployment.yaml`
+- `kubectl apply -f k8s/service.yaml`
 
 ## Troubleshooting
+```bash
 - aws eks list-clusters
 - aws eks describe-cluster --name <cluster-name>
 - aws ecr describe-repositories --repository-names <repository-name>
