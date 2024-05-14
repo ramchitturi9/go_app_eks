@@ -20,7 +20,7 @@ This project deploys a simple Go application on AWS EKS (Elastic Kubernetes Serv
 - AWS CLI configured with appropriate credentials
 - Terraform
 
-### Setup and Deployment
+## Setup and Deployment
 
 ### Build and push the Docker Image
 
@@ -37,7 +37,7 @@ terraform apply
 kubectl apply -f k8s/deployment.yaml
 kubectl apply -f k8s/service.yaml
 
-### Troubleshooting
+## Troubleshooting
 aws eks list-clusters
 aws eks describe-cluster --name <cluster-name>
 aws ecr describe-repositories --repository-names <repository-name>
