@@ -24,37 +24,37 @@ This project deploys a simple Go application on AWS EKS (Elastic Kubernetes Serv
 
 ### Build and push the Docker Image
 
-docker build -t <ecr-repo-url>:<tag> .
-docker push <ecr-repo-url>:<tag>
+- docker build -t <ecr-repo-url>:<tag> .
+- docker push <ecr-repo-url>:<tag>
 
 ### Running Terraform
-cd terraform
-terraform init
-terraform plan
-terraform apply
+- cd terraform
+- terraform init
+- terraform plan
+- terraform apply
 
 ### Deploying to Kubernetes
-kubectl apply -f k8s/deployment.yaml
-kubectl apply -f k8s/service.yaml
+- kubectl apply -f k8s/deployment.yaml
+- kubectl apply -f k8s/service.yaml
 
 ## Troubleshooting
-aws eks list-clusters
-aws eks describe-cluster --name <cluster-name>
-aws ecr describe-repositories --repository-names <repository-name>
-aws iam list-roles
-aws logs get-log-events --log-group-name <log-group-name> --log-stream-name <log-stream-name>
+- aws eks list-clusters
+- aws eks describe-cluster --name <cluster-name>
+- aws ecr describe-repositories --repository-names <repository-name>
+- aws iam list-roles
+- aws logs get-log-events --log-group-name <log-group-name> --log-stream-name <log-stream-name>
 
-kubectl cluster-info
-kubectl get nodes -o wide
-kubectl describe node <node-name>
-kubectl get pods -o wide --all-namespaces
-kubectl logs <pod-name>
-kubectl port-forward pod/<pod-name> 8080:80
-kubectl get deployments
-kubectl top pods
-kubectl top nodes
-kubectl get events --all-namespaces | grep -i failed
+- kubectl cluster-info
+- kubectl get nodes -o wide
+- kubectl describe node <node-name>
+- kubectl get pods -o wide --all-namespaces
+- kubectl logs <pod-name>
+- kubectl port-forward pod/<pod-name> 8080:80
+- kubectl get deployments
+- kubectl top pods
+- kubectl top nodes
+- kubectl get events --all-namespaces | grep -i failed
 
-Manage Go dependencies: `go.mod` & `go.sum` files will be created after initializing go with command `go mod tidy' 
+- Manage Go dependencies: `go.mod` & `go.sum` files will be created after initializing go with command `go mod tidy' 
 
 
