@@ -23,7 +23,7 @@ This project deploys a simple Go application on AWS EKS (Elastic Kubernetes Serv
 ## Setup and Deployment
 
 ### Build and push the Docker Image
-
+```bash
 - docker build -t <ecr-repo-url>:<tag> .
 - docker push <ecr-repo-url>:<tag>
 
